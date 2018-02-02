@@ -21,7 +21,7 @@ before_script:
 stages:
   - test
   - name: dependencies
-    if: 'head_branch =~ ^(?!greenkeeper/)' # No need to run tav tests for greenkeeper PR's
+    if: tag != greenkeeper # No need to run tav tests for greenkeeper PR's
     env: FOO=bar
     script: tav --quiet
 
