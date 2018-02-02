@@ -22,8 +22,6 @@ stages:
   - test
   - name: dependencies
     if: tag != greenkeeper # No need to run tav tests for greenkeeper PR's
-    env: FOO=bar
-    script: tav --quiet
 
 node_js:
   - '9'
@@ -69,6 +67,7 @@ jobs:
     - stage: dependencies
       node_js: '9'
       env: TAV=generic-pool,mysql,redis,koa-router,handlebars,mongodb-core
+      script: tav --quiet
     -
       node_js: '9'
       env: TAV=ioredis,pg
