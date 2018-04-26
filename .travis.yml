@@ -23,6 +23,7 @@ node_js:
   - '8'
   - '6'
   - '4'
+  - '10'
 
 jobs:
   fast_finish: true
